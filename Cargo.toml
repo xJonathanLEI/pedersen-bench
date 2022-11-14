@@ -1,0 +1,20 @@
+[package]
+name = "pedersen-bench"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ark-ff = "0.3.0"
+stark_hash = { git = "https://github.com/eqlabs/pathfinder", rev = "5e0f4423ed9e9385adbe8610643140e1a82eaef6" }
+starknet-curve = { git = "https://github.com/geometryresearch/proof-toolbox" }
+starknet-signature = { git = "https://github.com/xJonathanLEI/starknet-signatures.git", branch = "patch/722c598" }
+
+[dev-dependencies]
+criterion = "0.4.0"
+
+[patch.'https://github.com/geometryresearch/proof-toolbox']
+starknet-curve = { git = "https://github.com/geometryresearch//proof-toolbox", rev = "f805dd8e1eb4183da76040bf8e7388a180207508" }
+
+[[bench]]
+name = "pedersen_hash"
+harness = false
