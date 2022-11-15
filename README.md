@@ -2,13 +2,18 @@
 
 Comparison of performance of various Pedersen hash implementations.
 
+|                 | [pathfinder](https://github.com/eqlabs/pathfinder) :crown: | [starknet-signatures](https://github.com/geometryresearch/starknet-signatures) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) |
+| --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `pedersen_hash` | 25.604 µs                                                  | 138.83 µs                                                                      | 224.90 µs                                                  |
+| **Relative**    | 1.00x                                                      | 5.42x                                                                          | 8.78x                                                      |
+
 ## Implementations
 
 - [geometryresearch/starknet-signatures](https://github.com/geometryresearch/starknet-signatures)
 - [eqlabs/pathfinder](https://github.com/eqlabs/pathfinder)
 - [xJonathanLEI/starknet-rs](https://github.com/xJonathanLEI/starknet-rs)
 
-## Results
+## Raw results
 
 On the author's machine with _AMD Ryzen 9 5950X 16-Core Processor_ running _Ubuntu 20.04.5 LTS_:
 
