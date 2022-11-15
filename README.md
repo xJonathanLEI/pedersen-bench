@@ -29,3 +29,25 @@ Comparison of performance of various Pedersen hash implementations.
   - `wasmtime`: `wasmtime-cli 2.0.2`
   - `wasmer-js`: `wasmer-js 0.4.1`
   - Node.js: `v18.12.1`
+
+## Running benchmarks
+
+To run the native benchmarks:
+
+```console
+$ cargo bench
+```
+
+To run the WebAssembly benchmarks, make sure you have `wasm32-wasi` target and `cargo-wasi` installed. Then build the wasm file:
+
+```console
+$ ./scripts/build_bench_wasm.sh
+```
+
+Then you can run the benchmark with your taret runtime. For example, to run the benchmark against `wasmer`:
+
+```console
+$ ./scripts/run_bench_wasm.sh wasmer
+```
+
+For more information regarding wasm benchmarks, check out [this guide](https://github.com/bheisler/criterion.rs/blob/version-0.4/book/src/user_guide/wasi.md).
