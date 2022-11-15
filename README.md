@@ -2,10 +2,10 @@
 
 Comparison of performance of various Pedersen hash implementations.
 
-|                 | [pathfinder](https://github.com/eqlabs/pathfinder) :crown: | [starknet-signatures](https://github.com/geometryresearch/starknet-signatures) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) |
-| --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
-| `pedersen_hash` | 25.604 µs                                                  | 138.83 µs                                                                      | 224.90 µs                                                  |
-| **Relative**    | 1.00x                                                      | 5.42x                                                                          | 8.78x                                                      |
+|                 | [pathfinder](https://github.com/eqlabs/pathfinder) :crown: | [starknet-signatures](https://github.com/geometryresearch/starknet-signatures) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) (wasmtime) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) (Node.js) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) (wasmer) |
+| --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `pedersen_hash` | 25.604 µs                                                  | 138.83 µs                                                                      | 224.90 µs                                                  | 1.6478 ms                                                             | 1.7715 ms                                                            | 2.0084 ms                                                           |
+| **Relative**    | 1.00x                                                      | 5.42x                                                                          | 8.78x                                                      | 64.36x                                                                | 69.19x                                                               | 78.44x                                                              |
 
 ## Implementations
 
@@ -13,15 +13,19 @@ Comparison of performance of various Pedersen hash implementations.
 - [eqlabs/pathfinder](https://github.com/eqlabs/pathfinder)
 - [xJonathanLEI/starknet-rs](https://github.com/xJonathanLEI/starknet-rs)
 
-## Raw results
+## Environment
 
-On the author's machine with _AMD Ryzen 9 5950X 16-Core Processor_ running _Ubuntu 20.04.5 LTS_:
+- **CPU**
 
-```log
-geometryresearch/starknet-signatures@722c598
-                        time:   [138.69 µs 138.83 µs 139.00 µs]
-eqlabs/pathfinder@5e0f442
-                        time:   [25.509 µs 25.604 µs 25.707 µs]
-xJonathanLEI/starknet-rs@89a724f
-                        time:   [224.40 µs 224.90 µs 225.49 µs]
-```
+  _AMD Ryzen 9 5950X 16-Core Processor_
+
+- **OS**
+
+  _Ubuntu 20.04.5 LTS_
+
+- Runtimes
+
+  - `wasmer`: `wasmer 2.3.0`
+  - `wasmtime`: `wasmtime-cli 2.0.2`
+  - `wasmer-js`: `wasmer-js 0.4.1`
+  - Node.js: `v18.12.1`

@@ -4,15 +4,18 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+starknet-crypto = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "89a724f00ba6000120b17f68f6da0b4c982eea2f" }
+starknet-ff = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "89a724f00ba6000120b17f68f6da0b4c982eea2f" }
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 ark-ff = "0.3.0"
 stark_hash = { git = "https://github.com/eqlabs/pathfinder", rev = "5e0f4423ed9e9385adbe8610643140e1a82eaef6" }
 starknet = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "89a724f00ba6000120b17f68f6da0b4c982eea2f" }
-starknet-crypto = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "89a724f00ba6000120b17f68f6da0b4c982eea2f" }
 starknet-curve = { git = "https://github.com/geometryresearch/proof-toolbox" }
 starknet-signature = { git = "https://github.com/xJonathanLEI/starknet-signatures.git", branch = "patch/722c598" }
 
 [dev-dependencies]
-criterion = "0.4.0"
+criterion = { version = "0.4.0", default-features = false }
 
 [patch.crates-io]
 starknet = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "89a724f00ba6000120b17f68f6da0b4c982eea2f" }
