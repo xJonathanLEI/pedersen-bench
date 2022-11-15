@@ -1,8 +1,8 @@
 use ark_ff::field_new;
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
-use stark_hash::{stark_hash, StarkHash};
+use stark_hash::StarkHash;
+use starknet::macros::felt;
 use starknet_curve::Fq;
-use starknet_signature::pedersen_hash;
 
 pub fn criterion_benchmark(c: &mut Criterion) {
     let e0 = field_new!(
@@ -16,7 +16,7 @@ pub fn criterion_benchmark(c: &mut Criterion) {
 
     c.bench_function("geometryresearch/starknet-signatures@722c598", |b| {
         b.iter(|| {
-            black_box(pedersen_hash(&e0, &e1));
+            black_box(starknet_signature::pedersen_hash(&e0, &e1));
         });
     });
 
@@ -28,7 +28,16 @@ pub fn criterion_benchmark(c: &mut Criterion) {
 
     c.bench_function("eqlabs/pathfinder@5e0f442", |b| {
         b.iter(|| {
-            black_box(stark_hash(e0, e1));
+            black_box(stark_hash::stark_hash(e0, e1));
+        });
+    });
+
+    let e0 = felt!("0x03d937c035c878245caf64531a5756109c53068da139362728feb561405371cb");
+    let e1 = felt!("0x0208a0a10250e382e1e4bbe2880906c2791bf6275695e02fbbc6aeff9cd8b31a");
+
+    c.bench_function("xJonathanLEI/starknet-rs@89a724f", |b| {
+        b.iter(|| {
+            black_box(starknet_crypto::pedersen_hash(&e0, &e1));
         });
     });
 }
