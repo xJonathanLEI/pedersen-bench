@@ -15,10 +15,10 @@ Results are divided into two categories: native and Node.js/WebAssembly. Node.js
 
 ### Node.js/WebAssembly results
 
-|                 | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) :crown: | [paulmillr/micro-starknet](https://github.com/paulmillr/micro-starknet) |
-| --------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| `pedersen_hash` | 228.67 µs                                                          | 1.573 ms                                                                |
-| **Relative**    | 1.00x                                                              | 6.88x                                                                   |
+|                 | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) :crown: | [micro-starknet](https://github.com/paulmillr/micro-starknet) |
+| --------------- | ------------------------------------------------------------------ | ------------------------------------------------------------- |
+| `pedersen_hash` | 228.67 µs                                                          | 1.573 ms                                                      |
+| **Relative**    | 1.00x                                                              | 6.88x                                                         |
 
 ## Implementations
 
