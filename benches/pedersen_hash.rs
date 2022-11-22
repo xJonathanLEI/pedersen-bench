@@ -54,7 +54,7 @@ pub fn criterion_benchmark(c: &mut Criterion) {
         )
         .unwrap();
 
-        c.bench_function("xJonathanLEI/starknet-rs@89a724f", |b| {
+        c.bench_function("xJonathanLEI/starknet-rs@76e32ef", |b| {
             b.iter(|| {
                 black_box(starknet_crypto::pedersen_hash(&e0, &e1));
             });

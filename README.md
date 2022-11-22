@@ -8,17 +8,17 @@ Results are divided into two categories: native and Node.js/WebAssembly. Node.js
 
 ### Native results
 
-|                 | [pathfinder](https://github.com/eqlabs/pathfinder) :crown: | [starknet-signatures](https://github.com/geometryresearch/starknet-signatures) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) |
-| --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
-| `pedersen_hash` | 25.604 µs                                                  | 138.83 µs                                                                      | 224.90 µs                                                  |
-| **Relative**    | 1.00x                                                      | 5.42x                                                                          | 8.78x                                                      |
+|                 | [pathfinder](https://github.com/eqlabs/pathfinder) :crown: | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) | [starknet-signatures](https://github.com/geometryresearch/starknet-signatures) |
+| --------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `pedersen_hash` | 27.858 µs                                                  | 31.990 µs                                                  | 143.21 µs                                                                      |
+| **Relative**    | 1.00x                                                      | 1.15x                                                      | 5.14x                                                                          |
 
 ### Node.js/WebAssembly results
 
-|                 | [paulmillr/micro-starknet](https://github.com/paulmillr/micro-starknet) :crown: | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) |
-| --------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| `pedersen_hash` | 1.5015ms                                                                        | 1.7715 ms                                                  |
-| **Relative**    | 1.00x                                                                           | 1.18x                                                      |
+|                 | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) :crown: | [paulmillr/micro-starknet](https://github.com/paulmillr/micro-starknet) |
+| --------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| `pedersen_hash` | 228.67 µs                                                          | 1.573 ms                                                                |
+| **Relative**    | 1.00x                                                              | 6.88x                                                                   |
 
 ## Implementations
 

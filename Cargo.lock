@@ -1285,9 +1285,9 @@ dependencies = [
  "criterion",
  "stark_hash",
  "starknet",
- "starknet-crypto",
- "starknet-curve",
- "starknet-ff",
+ "starknet-crypto 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88)",
+ "starknet-curve 0.1.0 (git+https://github.com/geometryresearch//proof-toolbox?rev=f805dd8e1eb4183da76040bf8e7388a180207508)",
+ "starknet-ff 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88)",
  "starknet-signature",
 ]
 
@@ -1398,7 +1398,7 @@ dependencies = [
  "getrandom",
  "merlin",
  "rand",
- "starknet-curve",
+ "starknet-curve 0.1.0 (git+https://github.com/geometryresearch//proof-toolbox?rev=f805dd8e1eb4183da76040bf8e7388a180207508)",
  "thiserror",
 ]
 
@@ -1853,9 +1853,29 @@ dependencies = [
  "serde_json",
  "serde_with",
  "sha3",
- "starknet-crypto",
- "starknet-ff",
+ "starknet-crypto 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=89a724f00ba6000120b17f68f6da0b4c982eea2f)",
+ "starknet-ff 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=89a724f00ba6000120b17f68f6da0b4c982eea2f)",
  "thiserror",
+]
+
+[[package]]
+name = "starknet-crypto"
+version = "0.1.0"
+source = "git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88#76e32efe609919d1fdc6724cbefa2d3e119dea88"
+dependencies = [
+ "crypto-bigint 0.3.2",
+ "hex",
+ "hmac 0.11.0",
+ "num-bigint 0.4.3",
+ "num-integer",
+ "num-traits",
+ "rfc6979 0.1.0",
+ "sha2 0.9.9",
+ "starknet-crypto-codegen",
+ "starknet-curve 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88)",
+ "starknet-ff 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88)",
+ "thiserror",
+ "zeroize",
 ]
 
 [[package]]
@@ -1871,9 +1891,27 @@ dependencies = [
  "num-traits",
  "rfc6979 0.1.0",
  "sha2 0.9.9",
- "starknet-ff",
+ "starknet-ff 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=89a724f00ba6000120b17f68f6da0b4c982eea2f)",
  "thiserror",
  "zeroize",
+]
+
+[[package]]
+name = "starknet-crypto-codegen"
+version = "0.1.0"
+source = "git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88#76e32efe609919d1fdc6724cbefa2d3e119dea88"
+dependencies = [
+ "starknet-curve 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88)",
+ "starknet-ff 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88)",
+ "syn",
+]
+
+[[package]]
+name = "starknet-curve"
+version = "0.1.0"
+source = "git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88#76e32efe609919d1fdc6724cbefa2d3e119dea88"
+dependencies = [
+ "starknet-ff 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88)",
 ]
 
 [[package]]
@@ -1885,6 +1923,21 @@ dependencies = [
  "ark-ff",
  "ark-serialize",
  "ark-std",
+]
+
+[[package]]
+name = "starknet-ff"
+version = "0.1.0"
+source = "git+https://github.com/xJonathanLEI/starknet-rs?rev=76e32efe609919d1fdc6724cbefa2d3e119dea88#76e32efe609919d1fdc6724cbefa2d3e119dea88"
+dependencies = [
+ "ark-ff",
+ "bigdecimal",
+ "crypto-bigint 0.3.2",
+ "getrandom",
+ "hex",
+ "num-bigint 0.4.3",
+ "serde",
+ "thiserror",
 ]
 
 [[package]]
@@ -1949,7 +2002,7 @@ dependencies = [
  "rfc6979 0.2.0",
  "sha2 0.10.6",
  "starknet",
- "starknet-curve",
+ "starknet-curve 0.1.0 (git+https://github.com/geometryresearch//proof-toolbox?rev=f805dd8e1eb4183da76040bf8e7388a180207508)",
  "thiserror",
  "wasm-bindgen",
  "zeroize",
@@ -1962,7 +2015,7 @@ source = "git+https://github.com/xJonathanLEI/starknet-rs?rev=89a724f00ba6000120
 dependencies = [
  "async-trait",
  "starknet-core",
- "starknet-crypto",
+ "starknet-crypto 0.1.0 (git+https://github.com/xJonathanLEI/starknet-rs?rev=89a724f00ba6000120b17f68f6da0b4c982eea2f)",
  "thiserror",
 ]
 

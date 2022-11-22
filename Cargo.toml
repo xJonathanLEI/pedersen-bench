@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-starknet-crypto = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "89a724f00ba6000120b17f68f6da0b4c982eea2f" }
-starknet-ff = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "89a724f00ba6000120b17f68f6da0b4c982eea2f" }
+starknet-crypto = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "76e32efe609919d1fdc6724cbefa2d3e119dea88" }
+starknet-ff = { git = "https://github.com/xJonathanLEI/starknet-rs", rev = "76e32efe609919d1fdc6724cbefa2d3e119dea88" }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 ark-ff = "0.3.0"
