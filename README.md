@@ -2,10 +2,23 @@
 
 Comparison of performance of various Pedersen hash implementations.
 
-|                 | [pathfinder](https://github.com/eqlabs/pathfinder) :crown: | [starknet-signatures](https://github.com/geometryresearch/starknet-signatures) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) (wasmtime) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) (Node.js) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) (wasmer) |
-| --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `pedersen_hash` | 25.604 µs                                                  | 138.83 µs                                                                      | 224.90 µs                                                  | 1.6478 ms                                                             | 1.7715 ms                                                            | 2.0084 ms                                                           |
-| **Relative**    | 1.00x                                                      | 5.42x                                                                          | 8.78x                                                      | 64.36x                                                                | 69.19x                                                               | 78.44x                                                              |
+## Results
+
+Results are divided into two categories: native and Node.js/WebAssembly. Node.js/WebAssembly benchmark results are only presented for Node.js as it has reasonably good WebAssembly performance with the V8 engine.
+
+### Native results
+
+|                 | [pathfinder](https://github.com/eqlabs/pathfinder) :crown: | [starknet-signatures](https://github.com/geometryresearch/starknet-signatures) | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) |
+| --------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| `pedersen_hash` | 25.604 µs                                                  | 138.83 µs                                                                      | 224.90 µs                                                  |
+| **Relative**    | 1.00x                                                      | 5.42x                                                                          | 8.78x                                                      |
+
+### Node.js/WebAssembly results
+
+|                 | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) |
+| --------------- | ---------------------------------------------------------- |
+| `pedersen_hash` | 1.7715 ms                                                  |
+| **Relative**    | 1.00x                                                      |
 
 ## Implementations
 
@@ -29,8 +42,6 @@ Here's the list of implementations tested along with their platform availability
 
 - Runtimes
 
-  - `wasmer`: `wasmer 2.3.0`
-  - `wasmtime`: `wasmtime-cli 2.0.2`
   - `wasmer-js`: `wasmer-js 0.4.1`
   - Node.js: `v18.12.1`
 
