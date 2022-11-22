@@ -59,10 +59,10 @@ To run the WebAssembly benchmarks, make sure you have `wasm32-wasi` target and `
 $ ./scripts/build_bench_wasm.sh
 ```
 
-Then you can run the benchmark with your taret runtime. For example, to run the benchmark against `wasmer`:
+Then you can run the benchmark with your target runtime. For example, to run the benchmark against `wasmer-js` (Node.js):
 
 ```console
-$ ./scripts/run_bench_wasm.sh wasmer
+$ ./scripts/run_bench_wasm.sh wasmer-js
 ```
 
-For more information regarding wasm benchmarks, check out [this guide](https://github.com/bheisler/criterion.rs/blob/version-0.4/book/src/user_guide/wasi.md).
+For more information regarding wasm benchmarks with `criterion.rs`, check out [this guide](https://github.com/bheisler/criterion.rs/blob/version-0.4/book/src/user_guide/wasi.md).
