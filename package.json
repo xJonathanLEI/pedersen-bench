@@ -1,0 +1,22 @@
+{
+  "name": "pedersen-bench",
+  "version": "0.0.0",
+  "repository": "https://github.com/xJonathanLEI/pedersen-bench",
+  "author": "Jonathan LEI <me@xjonathan.dev>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "micro-starknet": "github:paulmillr/micro-starknet#a1e7fa08e714677b9b1123ae410681c413b22f27"
+  },
+  "devDependencies": {
+    "@types/benchmark": "^2.1.2",
+    "ts-loader": "^9.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}

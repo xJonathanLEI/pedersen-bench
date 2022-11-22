@@ -15,10 +15,10 @@ Results are divided into two categories: native and Node.js/WebAssembly. Node.js
 
 ### Node.js/WebAssembly results
 
-|                 | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) |
-| --------------- | ---------------------------------------------------------- |
-| `pedersen_hash` | 1.7715 ms                                                  |
-| **Relative**    | 1.00x                                                      |
+|                 | [paulmillr/micro-starknet](https://github.com/paulmillr/micro-starknet) :crown: | [starknet-rs](https://github.com/xJonathanLEI/starknet-rs) |
+| --------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `pedersen_hash` | 1.5015ms                                                                        | 1.7715 ms                                                  |
+| **Relative**    | 1.00x                                                                           | 1.18x                                                      |
 
 ## Implementations
 
@@ -29,6 +29,7 @@ Here's the list of implementations tested along with their platform availability
 | [geometryresearch/starknet-signatures](https://github.com/geometryresearch/starknet-signatures) | :white_check_mark: | :x:                 |
 | [eqlabs/pathfinder](https://github.com/eqlabs/pathfinder)                                       | :white_check_mark: | :x:                 |
 | [xJonathanLEI/starknet-rs](https://github.com/xJonathanLEI/starknet-rs)                         | :white_check_mark: | :white_check_mark:  |
+| [paulmillr/micro-starknet](https://github.com/paulmillr/micro-starknet)                         | :x:                | :white_check_mark:  |
 
 ## Environment
 
@@ -47,11 +48,15 @@ Here's the list of implementations tested along with their platform availability
 
 ## Running benchmarks
 
+### Native benchmarks
+
 To run the native benchmarks:
 
 ```console
 $ cargo bench
 ```
+
+### WebAssembly benchmarks
 
 To run the WebAssembly benchmarks, make sure you have `wasm32-wasi` target and `cargo-wasi` installed. Then build the wasm file:
 
@@ -66,3 +71,18 @@ $ ./scripts/run_bench_wasm.sh wasmer-js
 ```
 
 For more information regarding wasm benchmarks with `criterion.rs`, check out [this guide](https://github.com/bheisler/criterion.rs/blob/version-0.4/book/src/user_guide/wasi.md).
+
+### Node.js benchmarks
+
+To run non-wasm Node.js benchmarks, first build the benchmark script:
+
+```console
+$ yarn install
+$ yarn build
+```
+
+Then run the script with `node`:
+
+```console
+$ node build/js-bench.js
+```
