@@ -9,9 +9,13 @@ Comparison of performance of various Pedersen hash implementations.
 
 ## Implementations
 
-- [geometryresearch/starknet-signatures](https://github.com/geometryresearch/starknet-signatures)
-- [eqlabs/pathfinder](https://github.com/eqlabs/pathfinder)
-- [xJonathanLEI/starknet-rs](https://github.com/xJonathanLEI/starknet-rs)
+Here's the list of implementations tested along with their platform availability.
+
+| Implementation                                                                                  | Native             | Node.js/WebAssembly |
+| ----------------------------------------------------------------------------------------------- | ------------------ | ------------------- |
+| [geometryresearch/starknet-signatures](https://github.com/geometryresearch/starknet-signatures) | :white_check_mark: | :x:                 |
+| [eqlabs/pathfinder](https://github.com/eqlabs/pathfinder)                                       | :white_check_mark: | :x:                 |
+| [xJonathanLEI/starknet-rs](https://github.com/xJonathanLEI/starknet-rs)                         | :white_check_mark: | :white_check_mark:  |
 
 ## Environment
 
